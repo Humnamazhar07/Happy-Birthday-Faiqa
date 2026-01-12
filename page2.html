@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>For You, My Princess 💖</title>
+  <style>
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes floatUp {
+      0% { transform: translateY(0) rotate(-45deg); opacity: 0; }
+      20% { opacity: 1; }
+      80% { opacity: 1; }
+      100% { transform: translateY(-500px) rotate(-45deg); opacity: 0; }
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to right, #ffdde1, #ee9ca7);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #4a2c2a;
+      text-align: center;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    header {
+      padding: 40px 20px 10px;
+    }
+
+    header h1 {
+      font-size: 2.8em;
+      color: #fff0f5;
+      text-shadow: 3px 3px 8px #b30059;
+      animation: fadeIn 2s ease-in-out 0.5s;
+    }
+
+    .nav-buttons {
+      margin-top: 30px;
+      margin-bottom: 30px;
+    }
+
+    .nav-buttons button {
+      background-color: #ff4d79;
+      color: white;
+      border: none;
+      padding: 12px 25px;
+      font-size: 1.1em;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+      margin: 0 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .nav-buttons button:hover {
+      background-color: #ff80aa;
+      transform: translateY(-3px);
+    }
+
+    .short-message-box, .special-message-box {
+      max-width: 650px;
+      margin: 30px auto;
+      padding: 25px;
+      border-radius: 25px;
+      box-shadow: 0 0 20px rgba(255, 182, 193, 0.6);
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+      background: rgba(255, 240, 245, 0.95);
+    }
+
+    .short-message-box p {
+      font-size: 1.3em;
+      color: #b30059;
+      font-weight: bold;
+      margin: 0;
+    }
+
+    .special-message-box {
+      background: rgba(255, 182, 193, 0.9);
+    }
+
+    .special-message-box p {
+      font-size: 1.2em;
+      color: #800040;
+      font-style: italic;
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    .footer {
+      margin: 50px 0;
+      font-size: 1em;
+      color: #663366;
+      animation: fadeIn 2s ease-in-out 2s;
+    }
+
+    .heart {
+      position: absolute;
+      width: 25px;
+      height: 25px;
+      background-color: #ff4d79;
+      transform: rotate(-45deg);
+      animation: floatUp 7s infinite ease-in-out;
+      opacity: 0;
+      z-index: -1;
+    }
+
+    .heart:before,
+    .heart:after {
+      content: '';
+      position: absolute;
+      width: 25px;
+      height: 25px;
+      background-color: #ff4d79;
+      border-radius: 50%;
+    }
+
+    .heart:before { top: -12px; left: 0; }
+    .heart:after { top: 0; left: 12px; }
+  </style>
+</head>
+<body>
+
+  <!-- Floating Hearts -->
+  <div class="heart" style="left: 10%; top: 80%; animation-delay: 0s;"></div>
+  <div class="heart" style="left: 20%; top: 90%; animation-delay: 1s;"></div>
+  <div class="heart" style="left: 35%; top: 75%; animation-delay: 2.5s;"></div>
+  <div class="heart" style="left: 50%; top: 85%; animation-delay: 1.5s;"></div>
+  <div class="heart" style="left: 65%; top: 95%; animation-delay: 3s;"></div>
+  <div class="heart" style="left: 80%; top: 70%; animation-delay: 2s;"></div>
+  <div class="heart" style="left: 90%; top: 85%; animation-delay: 4s;"></div>
+
+  <audio autoplay loop>
+    <source src="music.mp3" type="audio/mp3">
+    Your browser does not support the audio element.
+  </audio>
+
+  <header>
+    <h1>Just a Little More From Me 💞</h1>
+  </header>
+
+  <div class="nav-buttons">
+    <button onclick="window.location.href='index.html'">⬅ Back</button>
+  </div>
+
+  <div class="short-message-box" id="message1">
+    <p>I love you beyond words, my heartbeat 💖</p>
+  </div>
+
+  <div class="special-message-box" id="message2">
+    <p>
+      You’re my favorite reason to smile every single day ☀️
+I don’t ever want to lose you, not even for a moment 🥺
+If I ever mess up, remind me gently — I’ll fix it, always 💕
+Just stay close, stay mine, stay us — forever 💖
+    </p>
+  </div>
+
+  <div class="footer">
+    <p>Made with all my love — Yours forever</p>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const msg1 = document.getElementById('message1');
+      const msg2 = document.getElementById('message2');
+
+      setTimeout(() => {
+        msg1.style.opacity = '1';
+        msg1.style.transform = 'translateY(0)';
+      }, 500);
+
+      setTimeout(() => {
+        msg2.style.opacity = '1';
+        msg2.style.transform = 'translateY(0)';
+      }, 2500);
+    });
+  </script>
+</body>
+</html>
